@@ -65,7 +65,7 @@ console.log(color('  Xeon Bot Inc. 2022','mediumseagreen'))
         fs.writeFileSync(`./${session}.json`, JSON.stringify(DogeXeonOP.base64EncodedAuthInfo(), null, '\t'))
 
     DogeXeonOP.on('chat-update', async (message) => {
-        require('./DogeBot.js')(DogeXeonOP, message, _welkom)
+        require('./MikuBot.js')(DogeXeonOP, message, _welkom)
     })
 DogeXeonOP.on("group-participants-update", async (anu) => {
 
