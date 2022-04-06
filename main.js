@@ -118,9 +118,9 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
       time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
       memeg = mdata.participants.length
-      out = `  ✾   𝙂𝙤𝙤𝙙𝙗𝙮𝙚 _*@${num.split('@')[0]}*_\n   ⃟🐶⃟    𝙃𝙤𝙥𝙚𝙛𝙪𝙡𝙡𝙮 𝙏𝙝𝙚𝙧𝙚 𝙒𝙤𝙣'𝙩 𝘽𝙚 𝘽𝙪𝙧𝙙𝙚𝙣 𝙃𝙚𝙧𝙚 𝘼𝙣𝙮𝙢𝙤𝙧𝙚`
-      goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'BYE 👋'},type:1}, {buttonId:`#menu`,buttonText:{displayText:'MENU 🗂️'}, type:1}]
-      goodbyeButt = { contentText: `${out}`, footerText: `𝘿𝙤𝙜𝙚 𝘽𝙤𝙩`, buttons: goodbyeBut, headerType: 6, locationMessage: bosco3.message.locationMessage}
+      out = `  ✾   𝑺𝒂𝒚𝒐𝒏𝒂𝒓𝒂 _*@${num.split('@')[0]}*_\n  ✾   𝑯𝒐𝒑𝒆𝒇𝒖𝒍𝒍𝒚 𝒕𝒉𝒆𝒓𝒆 𝒘𝒐𝒏'𝒕 𝒃𝒆 𝒂 𝒃𝒖𝒓𝒅𝒆𝒏 𝒉𝒆𝒓𝒆 𝒂𝒏𝒚𝒎𝒐𝒓𝒆`
+      goodbyeBut = [{buttonId:`#gbye`,buttonText:{displayText:'Sayonara🌸'},type:1}]
+      goodbyeButt = { contentText: `${out}`, footerText: `©Miku`, buttons: goodbyeBut, headerType: 6, locationMessage: bosco3.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, goodbyeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
       }
     } catch (e) {
