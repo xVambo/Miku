@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="https://media.tenor.com/images/55708181ec0e8ffa9b63f71a6b2ac2bd/tenor.gif" alt="animated" />
+  <a href="https://ibb.co/23p6YRC"><img src="" alt="images-2-1" border="0"></a><br /><a target='_blank' href='https://github.com/Vambo-M/'>upload pic</a><br />
 </p>
 
 <p align="center">
-<strong>Doge Bot V3</strong>
+<strong>•𝐌𝐢𝐤𝐮 𝐍𝐚𝐤𝐚𝐧𝐨•</strong>
 </p>
 
 </div>
