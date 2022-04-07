@@ -584,14 +584,14 @@ latensie = speed() - timestampe
 const { wa_version, os_version } = DogeXeonOP.user.phone
 pemilik = `${owner}@s.whatsapp.net`
 menu =
-`*_${ucapanWaktu} @${senderr.split('@')[0]}_*
+`*Konichiwa!✨ . Im Miku Nakano.*
 
-❏「 TIME 」
+❏「 DATE & TIME 」
 ${gaya1} *Date* : ${tanggal}
 ${gaya1} *Time* : ${time}
 
 ❏「 INFO BOT 」
-${gaya1} *Konichiwa! Im* : ${botname}
+${gaya1} *Im* : ${botname}
 ${gaya1} *Owner Name* : ${ownername}
 ${gaya1} *Platform :* ${os.platform()} 
 ${gaya1} *Mode :* ${self ? "Self" : "Public"}
