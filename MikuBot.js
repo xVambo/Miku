@@ -76,7 +76,7 @@ ownername = setting.OwnerName
 gaya1 = setting.gaya1
 gaya2 = setting.gaya2
 const fakeimage = fs.readFileSync ('./media/dogepic1.jpg')
-const thumb = fs.readFileSync ('./media/mikugetbot.jpg')
+const thumb = fs.readFileSync ('./media/dogetb.jpg')
 
 //══════════[ Developer Number ]══════════//
 
