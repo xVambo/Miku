@@ -2853,8 +2853,6 @@ vcard2 = 'BEGIN:VCARD\n'
 DogeXeonOP.sendMessage(from, {displayName: `The owner ${botname}`, vcard: vcard2}, contact, 
 { quoted: fgi, 
 })
-const devsound = fs.readFileSync('./media/botdev.mp3')
-DogeXeonOP.sendMessage(from, devsound, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek })
 break
 case 'sc':
 case 'script':
