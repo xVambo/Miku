@@ -1725,14 +1725,14 @@ reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp4?query=${bo}&apikey=${KingOfBearKey}`)
 mp4 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🐶` })
+DogeXeonOP.sendMessage(from, mp4, video, { quoted: mek, caption: `Here is your video🌸` })
 break
 case 'mp3':
 reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://apikey-bear3.herokuapp.com/api/yt/playmp3?query=${bo}&apikey=${KingOfBearKey}`)
 mp3 = await getBuffer(ini.url)
-DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: true, quoted: mek})
+DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek})
 break
 case 'ytmp3':
 
