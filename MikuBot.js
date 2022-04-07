@@ -1467,22 +1467,6 @@ give credit too / add in at tqtq
 --> Xeon*/
 
 
-case 'spotify':{
-    if (args.length == 0) return reply(`Example: ${prefix + command} https://open.spotify.com/track/0ZEYRVISCaqz5yamWZWzaA`)
-    url = args[0]
-    get_result = await fetchJson(`https://api.lolhuman.xyz/api/spotify?apikey=${lolkey}&url=${url}`)
-    get_result = get_result.result
-    ini_txt = `Title : ${get_result.title}\n`
-    ini_txt += `Artists : ${get_result.artists}\n`
-    ini_txt += `Duration : ${get_result.duration}\n`
-    ini_txt += `Popularity : ${get_result.popularity}\n`
-    ini_txt += `Preview : ${get_result.preview_url}\n`
-    thumbnail = await getBuffer(get_result.thumbnail)
-    await DogeXeonOP.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
-    get_audio = await getBuffer(get_result.link)
-    await DogeXeonOP.sendMessage(from, get_audio, audio, { mimetype: 'audio/mpeg', filename: `${get_result.title}.mp3`, quoted: mek})
-    }
-    break
    case 'soundcloud':
                 if(!q)return reply(`Example : ${prefix + command} sound cloud link`)
                 if (!q.includes('m.soundcloud.com')) return reply('Thats not a SoundCloud link')
