@@ -649,21 +649,6 @@ rows: [
 "rowId": `${prefix}randomvideo`
 },
 {
-"title": "AESTHETIC GIRL MENU",
-"description": `Display A List Of 18+ Intake Features`,
-"rowId": `${prefix}asupanmenu`
-},
-{
-"title": "RANDOM GIRL MENU",
-"description": `Display A List Of Random Girl Features`,
-"rowId": `${prefix}cecanmenu`
-},
-{
-"title": "ANIME MENU",
-"description": `Display A List Of Anime Features`,
-"rowId": `${prefix}animemenu`
-},
-{
 "title": "NSFW/HENTAI MENU",
 "description": `Display A List Of Nsfw 18+ Features`,
 "rowId": `${prefix}nsfwmenu`
