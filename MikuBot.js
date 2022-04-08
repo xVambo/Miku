@@ -742,8 +742,6 @@ ${gaya2} ${prefix}contag _@tag|Name_
 ${gaya2} ${prefix}sticktag _Reply Sticker_
 ${gaya2} ${prefix}totag _Reply Image_
 ${gaya2} ${prefix}creategroup _Name|tag_
-${gaya2} ${prefix}promoteall
-${gaya2} ${prefix}demoteall
 ${gaya2} ${prefix}listadmin
 ${gaya2} ${prefix}leave
 ${gaya2} ${prefix}grupowner
@@ -4536,28 +4534,6 @@ DogeXeonOP.groupDemoteAdmin(from, mentioned)
 mentions(`Order received, Demoted : @${mentioned[0].split('@')[0]} to a member`, mentioned, true)
 DogeXeonOP.groupDemoteAdmin(from, mentioned)
 }
-break
-case 'demoteall':
-
-if (!isGroup) return reply(mess.only.group)
-if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
-if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-members_id = []
-for (let mem of groupMembers) {
-members_id.push(mem.jid)
-}
-DogeXeonOP.groupDemoteAdmin(from, members_id)
-break
-case 'promoteall':
-
-if (!isGroup) return reply(mess.only.group)
-if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
-if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-members_id = []
-for (let mem of groupMembers) {
-members_id.push(mem.jid)
-}
-DogeXeonOP.groupMakeAdmin(from, members_id)
 break
 case 'add' :
 
