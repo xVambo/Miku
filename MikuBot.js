@@ -4540,7 +4540,7 @@ break
 case 'demoteall':
 
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
+if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 members_id = []
 for (let mem of groupMembers) {
@@ -4551,7 +4551,7 @@ break
 case 'promoteall':
 
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
+if (!isOwner && !mek.key.fromMe) return reply(mess.owner)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 members_id = []
 for (let mem of groupMembers) {
