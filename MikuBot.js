@@ -1722,7 +1722,7 @@ case 'ytmp3':
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
 anump3 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=${dhakey}`)
-ytmp3 = await getBuffer(anump3.result.url)
+ytmp3 = await getBuffer(ini.url)
 reply(`_Audio is being processed, please wait a while longer_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
