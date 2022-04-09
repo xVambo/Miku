@@ -1722,7 +1722,7 @@ case 'ytmp3':
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
 anump3 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=${dhakey}`)
-ytmp3 = await getBuffer(ini.url)
+ytmp3 = await getBuffer(anump3.result.url)
 reply(`_Audio is being processed, please wait a while longer_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
@@ -2295,7 +2295,7 @@ if (!isNsfw) return reply(mess.only.nsfw)
                 if (!isGroup) return reply('Bullshit! there is a child po*n\nIts better to just be in the group so that everyone will be sinned 😂')
 if (!isNsfw) return reply(mess.only.nsfw)
                 reply(mess.wait)
-                    getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${Lolhumanbykur}`).then((gambar) => {
+                    getBuffer(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${Lolhuman}`).then((gambar) => {
                         DogeXeonOP.sendMessage(from, gambar, image, { quoted: mek })
                     })
                     break
@@ -2338,7 +2338,7 @@ just give credit / add in tqtq
                 case 'freefire':          
                     if (args.length == 0) return reply(`Example: ${prefix + command} Xeon`)
                     ini_txt = args.join(" ")
-                    getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+                    getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${command}?apikey=${lolkey}&text=${command}`).then((gambar) => {
                         DogeXeonOP.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Here you go!`, quoted : mek}) 
                     })
                     break
