@@ -530,12 +530,12 @@ for (let anji of setik){
 
 //══════════[ Antilink & Antivirtex ]══════════//
 
-if (budy.includes("https://chat.whatsapp.com/")) {
+if (budy.includes("https:")) {
 if (!isGroup) return
 if (!isAntiLink) return
 if (isGroupAdmins) return
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-reply(` *「 GROUP LINK DETECTED 」*\nYou sent the group chat link, sorry you will be kicked from the group`)
+reply(` *「 GROUP LINK DETECTED 」*\nYou sent the group chat link, You will be kicked from the group`)
 setTimeout(() => {
 DogeXeonOP.groupRemove(from, [kic]).catch((e) => { reply(`BOTS MUST BE ADMIN`) })
 }, 0)
@@ -546,7 +546,7 @@ if (!isGroup) return
 if (!isAntiVirtex) return
 if (isGroupAdmins) return
 reply('Mark as read\n'.repeat(300))
-reply(`「 *VIRUS DETECTED* 」\n\nYou sent a virtex, sorry you will be kicked from the group`)
+reply(`「 *VIRUS DETECTED* 」\n\nYou sent a virtex, You will be kicked from the group`)
 console.log(color('[KICK]', 'red'), color('Received a text virus!', 'yellow'))
 DogeXeonOP.groupRemove(from, [sender])
 }     
