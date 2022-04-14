@@ -104,7 +104,7 @@ DogeXeonOP.on("group-participants-update", async (anu) => {
       time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
       time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
       teks = `  ✾   𝑾𝒆𝒍𝒄𝒐𝒎𝒆 _*@${num.split('@')[0]}*_ \n  ✾   𝑩𝒊𝒐 : _*${thu.status}*_ \n  ✾  𝑴𝒆𝒎𝒃𝒆𝒓 : _*${memeg}*_ \n  ✾   𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝒕𝒐 _*${mdata.subject}*_\n  ✾   𝑫𝒐𝒏𝒕 𝒇𝒐𝒓𝒈𝒆𝒕 𝒕𝒐 𝒓𝒆𝒂𝒅 𝑫𝒆𝒔𝒄𝒓𝒊𝒑𝒕𝒊𝒐𝒏>.<`
-      welcomeBut = [{buttonId:`#menu`,buttonText:{displayText:'MENU'},type:1}, {buttonId:`#getdesc`,buttonText:{displayText:'READ DESC'},type:1}]
+      welcomeBut = [{buttonId:`#getdesc`,buttonText:{displayText:'READ DESC'},type:1}]
       welcomeButt = { contentText: `${teks}`, footerText: `©Miku`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
       DogeXeonOP.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'buffer', "contextInfo": { "mentionedJid" : [num], },})
       }
