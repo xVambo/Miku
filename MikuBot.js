@@ -592,23 +592,20 @@ ${gaya1} *Time* : ${time}
 
 ❏「 INFO BOT 」
 ${gaya1} *Im* : ${botname}
-${gaya1} *Owner Name* : ${ownername}
 ${gaya1} *Platform :* ${os.platform()} 
 ${gaya1} *Mode :* ${self ? "Self" : "Public"}
-${gaya1} *Autoread* : ${autoread ? "Active" : "Off"}
-${gaya1} *Autotype* : ${autoketik ? "Active" : "Off"}
-${gaya1} *Autovn* : ${autovn ? "Active" : "Off"}
 
 ❏「 USER INFO 」
 ${gaya1} *Name* : ${pushname}
 ${gaya1} *Status* : ${isOwner ? 'Owner' : 'User'}`
 teks =
 `_Please Select Button Below_
-_If You Are A Mod User_
+_If You Can't view the buttons,_
 _Please Type ${prefix}command_`
 DogeXeonOP.sendMessage(from, { contentText: `${teks}`, footerText: `${menu}`, buttons: [{ buttonId: `${prefix}command`, buttonText: { displayText: 'MENU 🗃️' }, type: 1 },{ buttonId: `${prefix}sc`, buttonText: { displayText: 'SCRIPT 📝' }, type: 1 },{ buttonId: `${prefix}developer`, buttonText: { displayText: 'DEVELOPER 👨🏼‍💻' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [senderr,pemilik]}}}, 'buttonsMessage')
 break
 case 'command':
+case '?':
 
 listMsg = {
 buttonText: 'MENU',
@@ -4050,7 +4047,7 @@ DogeXeonOP.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: fin
 reply(`Broadcast success ${body.slice(4)}`)
 } else {
 for (let _ of anubc2) {
-sendMess(_.jid, `Bot Broadcast\n\n${body.slice(4)}`)
+sendMess(_.jid, `Miku Broadcast\n\n${body.slice(4)}`)
 }
 reply(`Broadcast Success`)
 }
@@ -4498,6 +4495,7 @@ yeh = `https://chat.whatsapp.com/${linkgc}\n\n*${groupName}* group link`
 DogeXeonOP.sendMessage(from, yeh, text, { quoted: fgi })
 break
 case 'promote' :
+case 'o^' :
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4517,6 +4515,7 @@ DogeXeonOP.groupMakeAdmin(from, mentioned)
 }
 break
 case 'demote' :
+case 'o×' :
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4536,6 +4535,7 @@ DogeXeonOP.groupDemoteAdmin(from, mentioned)
 }
 break
 case 'add' :
+case 'o+' :
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4551,6 +4551,9 @@ reply('Failed to add target, maybe because in private')
 }
 break
 case "kick":
+case "o-":
+case "die":
+case "sayonara":
 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply(mess.only.admin)
@@ -4678,12 +4681,12 @@ break
                            case 'tagall':
                 case 'tag':
 					if (!isGroup) return reply(mess.group)
-					if (!isGroupAdmins && !mek.key.fromMe) return reply('only admin and bot owner can use this feature')
+					if (!isGroupAdmins && !mek.key.fromMe) return reply('Only Admins can use this feature')
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `🐶 @${mem.jid.split('@')[0]}\n`
+						teks += `♦️ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
@@ -4805,6 +4808,8 @@ case 'sticktag':
         break   
 case 'listadmin':
 case 'adminlist':
+case 'admins':
+case 'admin':
 
 if (!isGroup) return reply(mess.only.group)
 teks = `Admin list of group *${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
