@@ -1715,28 +1715,23 @@ mp3 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek})
 break
 case 'ytmp3':
-      case 'yt':
-      case 'video':
-             if (args.length < 1) return reply('*Where is the link?*')
-             if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-             teks = args.join(' ')
-             res = await y2mateA(teks).catch(e => {
-             reply('*Error Failed To Enter Y2mate Web*')
-})
-             result = `
-*Tɪᴛʟᴇ :* ${res[0].judul}
-*Tʏᴘᴇ :* mp3/mp4
-*Sɪᴢᴇ :* ${res[0].size}`
-              buttons = [{buttonId: `${prefix}buttons2 ${q}`,buttonText:{displayText: 'ᴠɪᴅᴇᴏ'},type:1},{buttonId:`${prefix}buttons1 ${q}`,buttonText:{displayText:'ᴀᴜᴅɪᴏ'},type:1}]
-              fs.writeFileSync(`./ytmp.jpeg`, await getBuffer(res[0].thumb))
-              yt1 = await bosco.prepareMessage(from, fs.readFileSync(`./ytmp.jpeg`), location, {thumbnail: fs.readFileSync(`./ytmp.jpeg`),})
-              yt2 = yt1.message["ephemeralMessage"] ? yt1.message.ephemeralMessage : yt1
-              buttonsMessage = {footerText:`${result}`,
-              contentText:` `,buttons,headerType:6, locationMessage: yt2.message.locationMessage}
-              prep = await bosco.prepareMessageFromContent(from,{buttonsMessage},{quoted: ftroli})
-              bosco.relayWAMessage(prep)
-              fs.unlinkSync(`./ytmp.jpeg`)
-              break
+
+if (args.length < 1) return reply("Where is the link?")
+url = args.join(' ')
+anump3 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp3?url=${url}&apikey=${dhakey}`)
+ytmp3 = await getBuffer(anump3.result.url)
+reply(`_Audio is being processed, please wait a while longer_`)
+DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
+break
+case 'ytmp4':
+
+if (args.length < 1) return reply("Where is the link?")
+url = args.join(' ')
+anump4 = await fetchJson(`https://apidhani.herokuapp.com/api/download/ytmp4?url=${url}&apikey=${dhakey}`)
+ytmp4 = await getBuffer(anump4.result.url)
+reply(`_The video is being processed, please wait a few more moments_`)
+DogeXeonOP.sendMessage(from, ytmp4, video, {caption:`Done✓`, thumbnail:Buffer.alloc(0), quoted:mek})
+break
 
 //══════════[ INTAKE FEATURES ]══════════//
 /*Help case ?
@@ -3429,6 +3424,7 @@ break
 					})
 					break
 					case 'profile':
+                                        case 'p':
 					if (!isGroup) return reply(mess.group)
 				    let anuprofileoke = await DogeXeonOP.groupMetadata(from)
                     const thu = await DogeXeonOP.getStatus(anuprofileoke.participants[0], MessageType.text)
