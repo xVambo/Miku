@@ -4563,7 +4563,7 @@ if (
 mek.message.extendedTextMessage === undefined ||
 mek.message.extendedTextMessage === null
 )
-return reply("Tag the target you want to kick!");
+return reply("Tag the person you want to kick!");
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid;
 if (mentioned.length > 1) {
 DogeXeonOP.groupRemove(from, mentioned);
