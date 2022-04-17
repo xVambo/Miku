@@ -2253,7 +2253,7 @@ break
                 if (!isGroup) return reply('Bullshit! there is a child po*n\nIts better to just be in the group so that everyone will be sinned 😂')
 if (!isNsfw) return reply(mess.only.nsfw)
                 reply(mess.wait)
-                    await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${Lolhumanbykur}`).then((gambar) => {
+                    await getBuffer(`https://api.waifu.pics/nsfw/${command}`).then((gambar) => {
                        DogeXeonOP.sendMessage(from, gambar, image, { quoted: mek })
                     })
                     break
