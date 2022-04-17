@@ -1715,6 +1715,7 @@ mp3 = await getBuffer(ini.url)
 DogeXeonOP.sendMessage(from, mp3, audio, { mimetype: 'audio/mp4', ptt: false, quoted: mek})
 break
 case 'ytmp3':
+case 'yta':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
@@ -1724,6 +1725,7 @@ reply(`_Audio is being processed, please wait a while longer_`)
 DogeXeonOP.sendMessage(from, ytmp3, audio, {mimetype:"audio/mp4", quoted:mek})
 break
 case 'ytmp4':
+case 'ytv':
 
 if (args.length < 1) return reply("Where is the link?")
 url = args.join(' ')
